@@ -1,0 +1,21 @@
+form{
+    display: block;
+    border: 1px solid #dcdcdc;
+    overflow: hidden;
+    padding: 0.5em;
+}
+
+form div{
+    display: inline-block;
+}
+
+form input{
+    display: inline-block;
+}
+
+#errorMsg{
+    display: block;
+    border: 1px solid #dcdcdc;
+    border-top: 0;
+    padding: 0.5em;
+}

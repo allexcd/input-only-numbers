@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="description" content="AngularJS directive to keep only numbers when typing in input fields">
+    <meta name="keywords" content="AngularJS, directive, input, numbers">
+    <meta name="author" content="Alexandru Costin Dumitru (AlexCD)">
+    <meta charset="UTF-8">
+    <title>AngularInputOnlyNumbers</title>
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+    <script type="text/javascript" src="js/lib/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/lib/angular.min.js"></script>
+
+    <!--directives-->
+    <script type="text/javascript" src="js/directives/inputOnlyNumbers.js"></script>
+
+    <!--modules-->
+    <script type="text/javascript" src="js/modules/directives.js"></script>
+    <script type="text/javascript" src="js/modules/modules.js"></script>
+
+</head>
+<body ng-app="modules">
+
+    <form name="theForm">
+        <div>Min: 10</div>
+        <input type="text" ng-model="model" min="10" max="100" input-only-numbers />
+        <div>Max: 100</div>
+    </form>
+
+    <div id="errorMsg">
+        <span ng-show="theForm.$error.rangeError">Invalid range</span>
+        <div ng-show="!theForm.$error.rangeError">Valid range</div>
+    </div>
+
+</body>
+</html>
